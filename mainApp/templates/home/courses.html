@@ -1,0 +1,154 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block body %}
+    <!-- Page_banner start -->
+    <section class="breadcrumb_sec" style="background-image:url({% static 'home/assets/images/classes_bg.jpg' %});">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title_box_page">
+              <div class="page_banner_img"> <img class="img-responsive wow fadeInLeft animated img_animate"
+                  src="{% static 'home/assets/images/title-bg.png' %}" alt=""> </div>
+              <div class="page_banner_title">
+                <h2 class="wow fadeInUp animated title_animate">Our Courses</h2>
+                <p class="wow fadeInUp animated titlep_animate">TRANSFORM YOUR BODY WITH SAMEER RAJPUT – MR INDIA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page_banner end -->
+
+    <!-- Courses section with filtering based on real specialties -->
+    <div class="inner_classes">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="filter-row">
+              <li><button class="filter-button active" data-filter="all">All</button></li>
+              <li><button class="filter-button" data-filter="weight-gain">Weight Gain</button></li>
+              <li><button class="filter-button" data-filter="weight-loss">Weight Loss</button></li>
+              <li><button class="filter-button" data-filter="muscle-building">Muscle Building</button></li>
+              <li><button class="filter-button" data-filter="bodybuilding">Competitive Bodybuilding</button></li>
+              <li><button class="filter-button" data-filter="mens-physique">Men's Physique</button></li>
+              <li><button class="filter-button" data-filter="fitness-modelling">Fitness Modelling</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-data">
+          <div class="row g-4">
+            <!-- Weight Gain -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter weight-gain">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/1.png' %}" alt="Weight Gain Transformation"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Weight Gain</h3>
+                  <p>Science‑based nutrition & training to build lean mass</p>
+                </div>
+              </div>
+            </div>
+            <!-- Weight Loss -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter weight-loss">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/3.png' %}" alt="Weight Loss"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Weight Loss</h3>
+                  <p>Customised fat‑loss plans with metabolic conditioning</p>
+                </div>
+              </div>
+            </div>
+            <!-- Muscle Building -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter muscle-building">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/4.png' %}" alt="Muscle Building"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Muscle Building</h3>
+                  <p>Hypertrophy programmes for maximum muscle gains</p>
+                </div>
+              </div>
+            </div>
+            <!-- Competitive Bodybuilding -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter bodybuilding">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/1.png' %}" alt="Competitive Bodybuilding"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Competitive Bodybuilding</h3>
+                  <p>Show‑prep, posing, peak week – guided by Mr India</p>
+                </div>
+              </div>
+            </div>
+            <!-- Men's Physique -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter mens-physique">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/2.png' %}" alt="Men's Physique"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Men's Physique</h3>
+                  <p>Aesthetic proportions, conditioning, stage presence</p>
+                </div>
+              </div>
+            </div>
+            <!-- Fitness Modelling -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter fitness-modelling">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/4.png' %}" alt="Fitness Modelling"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Fitness Modelling</h3>
+                  <p>Portfolio prep, diet, and specific training for models</p>
+                </div>
+              </div>
+            </div>
+            <!-- Additional: Specialist Program (example) -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter weight-loss muscle-building">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/1.png' %}" alt="Body Recomposition"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Body Recomposition</h3>
+                  <p>Lose fat & gain muscle simultaneously (advanced)</p>
+                </div>
+              </div>
+            </div>
+            <!-- Nutrition & Supplementation -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter weight-gain weight-loss">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/3.png' %}" alt="Nutrition Coaching"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Nutrition Coaching</h3>
+                  <p>Personalised meal plans & supplementation guidance</p>
+                </div>
+              </div>
+            </div>
+            <!-- Strength & Conditioning -->
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filter muscle-building bodybuilding">
+              <div class="course_box1">
+                <div class="img_course1"> <img class="img-responsive" src="{% static 'home/assets/images/2.png' %}" alt="Strength Training"><a href="#" class="course_read">Learn More</a> </div>
+                <div class="course_con1">
+                  <h3>Strength & Conditioning</h3>
+                  <p>Powerlifting, athletic performance, injury prevention</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Courses section end -->
+
+    <!-- Discount / Promo section updated -->
+    <section class="discount_con">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="discount_title">
+              <h1>Start Your Transformation Today! <br>Pay Now & Get <span style="color:#f7b42c;">20% OFF</span> on First Month</h1>
+              <p>Limited offer for new members – training under Mr India Sameer Rajput</p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="discount_btn"> <a href="/contact" class="discount_button">Join Now</a> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Discount end -->
+{% endblock %}

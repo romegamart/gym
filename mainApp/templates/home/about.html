@@ -1,0 +1,253 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block body %}
+    <!-- Page_banner start -->
+    <section class="breadcrumb_sec" style="background-image:url({% static 'home/assets/images/about_bg.jpg' %});">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title_box_page">
+              <div class="page_banner_img"> <img class="img-responsive wow fadeInLeft animated img_animate"
+                  src="{% static 'home/assets/images/sameer.webp' %}" alt=""> </div>
+              <div class="page_banner_title">
+                <h2 class="wow fadeInUp animated title_animate">About Us</h2>
+                <p class="wow fadeInUp animated titlep_animate">MEET SAMEER RAJPUT – MR INDIA & MASTER TRAINER</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page_banner end -->
+
+    <!-- about start (updated with real credentials) -->
+    <section class="about_sec about_inner_page">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-5">
+            <div class="about_img"> <img class="img-responsive" src="{% static 'home/assets/images/about_inner.png' %}" alt="Sameer Rajput - Mr India"> </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="row">
+              <div class="about_inner_page_con">
+                <h2 class="title"><span>About Us</span> Sam Strength Fitness – Unisex Gym</h2>
+                <p><strong>Sameer Rajput</strong> is a certified <strong>Master Trainer, Personal Trainer, Fitness Trainer, and Nutritionist</strong> (Food & Supplementation). With <strong>16+ years of experience</strong>, he has won prestigious titles: <strong>Mr India, Mr North India, Mr Delhi, Mr Haryana</strong>. He has trained athletes in <strong>Bodybuilding, Fitness Modelling, and Men’s Physique</strong>.</p>
+                <p>Our gym <strong>Sam Strength Fitness Unisex Gym</strong> is located at <strong>FS-5, Second Floor, above Axis Bank, Tagore Garden, Delhi – 110027</strong>. We specialize in:</p>
+                <ul>
+                  <li>✔️ Weight Gain Transformation</li>
+                  <li>✔️ Weight Loss Transformation</li>
+                  <li>✔️ Muscle Building</li>
+                  <li>✔️ Competitive Bodybuilding</li>
+                  <li>✔️ Men’s Physique Preparation</li>
+                </ul>
+                <p>Whether you are a beginner or a competitive athlete, Sameer’s science-backed training and nutrition guidance will help you achieve your dream physique.</p>
+                <a href="contact.html" class="primary-btn about_btn"> Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end-->
+
+    <!-- counter start (realistic stats) -->
+    <div class="achivments" id="counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-6 border_col wow fadeInLeft animated">
+            <div class="achievements_box text-center"> <img class="img-fluid" src="{% static 'home/assets/images/customers.png' %}" alt="Years of Experience">
+              <div class="counter-value number" data-count="16">0</div>
+              <p>Years Experience</p>
+            </div>
+          </div>
+          <div class="col-sm-3 col-6 border_col wow fadeInLeft animated">
+            <div class="achievements_box text-center"> <img class="img-fluid" src="{% static 'home/assets/images/coffee.png' %}" alt="Awards Won">
+              <div class="counter-value number" data-count="4">0</div>
+              <p>Mr India Titles</p>
+            </div>
+          </div>
+          <div class="col-sm-3 col-6 border_col wow fadeInLeft animated">
+            <div class="achievements_box text-center"> <img class="img-fluid" src="{% static 'home/assets/images/equipments.png' %}" alt="Happy Clients">
+              <div class="counter-value number" data-count="1850">0</div>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+          <div class="col-sm-3 col-6 border_col wow fadeInLeft animated">
+            <div class="achievements_box text-center"> <img class="img-fluid" src="{% static 'home/assets/images/experience.png' %}" alt="Certifications">
+              <div class="counter-value number" data-count="4">0</div>
+              <p>Certifications</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- counter end-->
+
+    <!-- testimonials start (updated with real client voices) -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="about_inner_page_con title_box">
+              <h2 class="title"><span>Testimonial</span>What Our Members Say</h2>
+              <p>Real transformations under Sameer’s guidance –<br>from weight loss to stage‑ready physique.</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-carousel owl-theme ss_carousel" id="testimonials_slider">
+              <div class="item">
+                <div class="client_img"> <img class="img-responsive" src="{% static 'home/assets/images/testimonials_img.png' %}" alt="Client">
+                </div>
+                <div class="testimonials_box">
+                  <div class="client_name">
+                    <p>Rohit Mehta</p>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <h5>I lost 18 kg in 6 months with Sameer’s personalised diet and training. His knowledge of nutrition and contest prep is unmatched. Highly recommend Sam Strength Fitness!</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="client_img"> <img class="img-responsive" src="{% static 'home/assets/images/testimonials_img.png' %}" alt="Client">
+                </div>
+                <div class="testimonials_box">
+                  <div class="client_name">
+                    <p>Neha Sharma</p>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <h5>The unisex gym environment is very welcoming. Sameer sir helped me gain lean muscle and improve my strength. I feel confident and fitter than ever!</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="client_img"> <img class="img-responsive" src="{% static 'home/assets/images/testimonials_img.png' %}" alt="Client">
+                </div>
+                <div class="testimonials_box">
+                  <div class="client_name">
+                    <p>Kunal Verma</p>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <h5>Preparing for my first bodybuilding show was intimidating, but Sameer’s contest prep plan and motivation got me on stage. A true champion coach!</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="client_img"> <img class="img-responsive" src="{% static 'home/assets/images/testimonials_img.png' %}" alt="Client">
+                </div>
+                <div class="testimonials_box">
+                  <div class="client_name">
+                    <p>Priyanka Arora</p>
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <h5>I joined for postnatal weight loss. Within 4 months, I shed 12 kg and gained core strength. The trainers are extremely supportive. Best decision!</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials end-->
+
+    <!-- trainer start (featuring Sameer Rajput and team) -->
+    <section class="inner_trainer Trainer_sec" id="Trainer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="title-right">
+              <h2 class="title"><span>Trainers</span> Meet Our Expert Coaches</h2>
+              <p class="aftertitle">Led by Mr India Sameer Rajput – each coach is certified and experienced in bodybuilding, weight loss, and sports nutrition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="trainers-list carousel">
+          <div class="owl-carousel owl-theme ss_carousel" id="slider3">
+            <div class="item">
+              <div class="trainer_box">
+                <div class="img_trainer"> <img class="img-responsive" src="{% static 'home/assets/images/sameer.webp' %}" alt="Sameer Rajput"> </div>
+                <div class="footer-social1">
+                  <ul class="social_icon">
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/facebook.png' %}" alt="fb"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/twitter.png' %}" alt="tw"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/instagram.png' %}" alt="ig"></a></li>
+                  </ul>
+                </div>
+                <div class="trainer_con">
+                  <h3>Sameer Rajput</h3>
+                  <p>Master Trainer | Mr India | Nutritionist</p>
+                  <p style="font-size:12px;">16+ Years • Bodybuilding & Physique Specialist</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="trainer_box">
+                <div class="img_trainer"> <img class="img-responsive" src="{% static 'home/assets/images/t2.png' %}" alt="Coach Vikram"> </div>
+                <div class="footer-social1">
+                  <ul class="social_icon">
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/facebook.png' %}" alt="fb"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/twitter.png' %}" alt="tw"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/instagram.png' %}" alt="ig"></a></li>
+                  </ul>
+                </div>
+                <div class="trainer_con">
+                  <h3>Vikram Singh</h3>
+                  <p>Strength & Conditioning Coach</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="trainer_box">
+                <div class="img_trainer"> <img class="img-responsive" src="{% static 'home/assets/images/t3.png' %}" alt="Coach Ritika"> </div>
+                <div class="footer-social1">
+                  <ul class="social_icon">
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/facebook.png' %}" alt="fb"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/twitter.png' %}" alt="tw"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/instagram.png' %}" alt="ig"></a></li>
+                  </ul>
+                </div>
+                <div class="trainer_con">
+                  <h3>Ritika Sharma</h3>
+                  <p>Women’s Fitness & Nutrition Expert</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="trainer_box">
+                <div class="img_trainer"> <img class="img-responsive" src="{% static 'home/assets/images/t1.png' %}" alt="Coach Ankit"> </div>
+                <div class="footer-social1">
+                  <ul class="social_icon">
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/facebook.png' %}" alt="fb"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/twitter.png' %}" alt="tw"></a></li>
+                    <li><a href="#"><img class="img-responsive" src="{% static 'home/assets/images/instagram.png' %}" alt="ig"></a></li>
+                  </ul>
+                </div>
+                <div class="trainer_con">
+                  <h3>Ankit Tomar</h3>
+                  <p>Functional & HIIT Trainer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- trainer end-->
+
+    <!-- gallery start -->
+    <div class="gallery">
+      <div class="footer-gallery owl-carousel owl-theme ss_carousel" id="slider2">
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_1.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_1.png' %}" alt="Gym Gallery"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_2.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_2.png' %}" alt="Training Session"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_3.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_3.png' %}" alt="Weight Training"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_4.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_4.png' %}" alt="Fitness Challenge"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_5.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_5.png' %}" alt="Group Class"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_1.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_1.png' %}" alt="Gym Floor"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+        <div class="item"> <a href="{% static 'home/assets/images/gallery_2.png' %}"> <img class="img-responsive"
+              src="{% static 'home/assets/images/gallery_2.png' %}" alt="Personal Training"> <i class="fa fa-link" aria-hidden="true"></i></a> </div>
+      </div>
+    </div>
+    <!-- gallery end -->
+{% endblock %}
