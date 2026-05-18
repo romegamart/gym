@@ -1,104 +1,406 @@
 {% extends "home/index.html" %}
 {% load static %}
 {% block body %}
-    <!-- Page_banner start -->
-    <section class="breadcrumb_sec" style="background-image:url({% static 'home/assets/images/contact_bg.jpg' %});">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title_box_page">
-              <div class="page_banner_img"> <img class="img-responsive wow fadeInLeft animated img_animate"
-                  src="{% static 'home/assets/images/title-bg.png' %}" alt=""> </div>
-              <div class="page_banner_title">
-                <h2 class="wow fadeInUp animated title_animate">Contact Us</h2>
-                <p class="wow fadeInUp animated titlep_animate">GET IN TOUCH WITH SAM STRENGTH FITNESS – UNISEX GYM</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Page_banner end -->
 
-    <!-- contact detail start (updated with real info) -->
-    <div class="contact_detail">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="location_box">
-              <div class="location_icon"> <img class="img-responsive hoverin" src="{% static 'home/assets/images/location.png' %}" alt="">
-                <img class="img-responsive hoverout" src="{% static 'home/assets/images/location_hover.png' %}" alt=""> </div>
-              <div class="location_address">
-                <p>FS-5, Second Floor, above Axis Bank<br>
-                  Tagore Garden, Delhi – 110027</p>
-              </div>
-            </div>
+<!-- Success Popup CSS -->
+<style>
+  /* Modal overlay */
+  .success-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* Modal content */
+  .success-modal-content {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px 30px;
+    position: relative;
+    animation: slideInUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Success icon animation */
+  .success-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease 0.2s both;
+  }
+
+  .success-icon i {
+    font-size: 45px;
+    color: white;
+  }
+
+  /* Checkmark animation */
+  .checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 0 auto;
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+  }
+
+  .checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #22c55e;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+
+  .checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+  }
+
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes scale {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #22c55e;
+    }
+  }
+
+  .success-modal-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 15px 0 10px;
+    color: #1e293b;
+  }
+
+  .success-modal-content p {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0 25px;
+  }
+
+  .modal-close-btn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  }
+
+  .modal-close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+  }
+
+  /* Confetti particles */
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fbbf24;
+    opacity: 0;
+    animation: confettiFall 2s ease-out forwards;
+  }
+
+  @keyframes confettiFall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(400px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Close button on top-right */
+  .close-top {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: color 0.3s;
+  }
+
+  .close-top:hover {
+    color: #ef4444;
+  }
+</style>
+
+<!-- Page_banner start -->
+<section class="breadcrumb_sec" style="background-image:url({% static 'home/assets/images/contact_bg.jpg' %});">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title_box_page">
+          <div class="page_banner_img"> 
+            <img class="img-responsive wow fadeInLeft animated img_animate" src="{% static 'home/assets/images/title-bg.png' %}" alt=""> 
           </div>
-          <div class="col-md-4">
-            <div class="location_box">
-              <div class="location_icon"> <img class="img-responsive hoverin" src="{% static 'home/assets/images/phone.png' %}" alt=""> <img
-                  class="img-responsive hoverout" src="{% static 'home/assets/images/phone_hover.png' %}" alt=""> </div>
-              <div class="location_address">
-                <p><a href="tel:+919876543210">+91 98765 43210</a><br>
-                  <a href="mailto:info@samstrength.in">info@samstrength.in</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="location_box">
-              <div class="location_icon"> <img class="img-responsive hoverin" src="{% static 'home/assets/images/time.png' %}" alt=""> <img
-                  class="img-responsive hoverout" src="{% static 'home/assets/images/time_hover.png' %}" alt=""> </div>
-              <div class="location_address">
-                <p>6:00 AM to 10:00 PM (Mon–Sat)<br>
-                  Sunday: 8:00 AM to 2:00 PM</p>
-              </div>
-            </div>
+          <div class="page_banner_title">
+            <h2 class="wow fadeInUp animated title_animate">Contact Us</h2>
+            <p class="wow fadeInUp animated titlep_animate">GET IN TOUCH WITH SAM STRENGTH FITNESS – UNISEX GYM</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- contact detail end -->
+  </div>
+</section>
+<!-- Page_banner end -->
 
-    <!-- map start – Tagore Garden, Delhi -->
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14005.789044911997!2d77.09137198715817!3d28.646323799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03a50617858f%3A0x716da3a872331a01!2sSam%20strength%20fitness%20unisex%20gym!5e0!3m2!1sen!2sin!4v1778502604036!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- map end -->
-
-    <!-- contact form start -->
-    <div class="contact_form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="about_inner_page_con title_box">
-              <h2 class="title"><span>Contact Form </span>Fill the below form</h2>
-              <p>Our team will get back to you within 24 hours. For urgent inquiries, call us directly.</p>
-            </div>
+<!-- contact detail start -->
+<div class="contact_detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="location_box">
+          <div class="location_icon"> 
+            <img class="img-responsive hoverin" src="{% static 'home/assets/images/location.png' %}" alt="">
+            <img class="img-responsive hoverout" src="{% static 'home/assets/images/location_hover.png' %}" alt=""> 
+          </div>
+          <div class="location_address">
+            <p>FS-5, Second Floor, above Axis Bank<br>Tagore Garden, Delhi – 110027</p>
           </div>
         </div>
-        <form id="contact-us-form">
-          <div class="row">
-              <div class="col-md-4">
-                <input name="name" class="contact_form_detail" required type="text" placeholder="Your Name">
-              </div>
-              <div class="col-md-4">
-                <input name="phone" class="contact_form_detail" required type="text" placeholder="Phone No.">
-              </div>
-              <div class="col-md-4">
-                <input name="email" class="contact_form_detail" required type="text" placeholder="Email Address">
-              </div>
-              <div class="col-md-12">
-                <textarea name="message" class="contact_form_detail1" required placeholder="Your Message (e.g., membership inquiry, personal training, etc.)"></textarea>
-              </div>
-              <div class="col-md-12">
-                <div class="submit_btn_box">
-                  <input name="submit" class="submit_btn hvr-shutter-out-horizontal" type="submit" value="Submit Now">
-                </div>
-              </div>
+      </div>
+      <div class="col-md-4">
+        <div class="location_box">
+          <div class="location_icon"> 
+            <img class="img-responsive hoverin" src="{% static 'home/assets/images/phone.png' %}" alt=""> 
+            <img class="img-responsive hoverout" src="{% static 'home/assets/images/phone_hover.png' %}" alt=""> 
           </div>
-        </form>
+          <div class="location_address">
+            <p><a href="tel:+919876543210">+91 98765 43210</a><br>
+              <a href="mailto:info@samstrength.in">info@samstrength.in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="location_box">
+          <div class="location_icon"> 
+            <img class="img-responsive hoverin" src="{% static 'home/assets/images/time.png' %}" alt=""> 
+            <img class="img-responsive hoverout" src="{% static 'home/assets/images/time_hover.png' %}" alt=""> 
+          </div>
+          <div class="location_address">
+            <p>6:00 AM to 10:00 PM (Mon–Sat)<br>Sunday: 8:00 AM to 2:00 PM</p>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- contact form end -->
+  </div>
+</div>
+<!-- contact detail end -->
+
+<!-- map start -->
+<div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14005.789044911997!2d77.09137198715817!3d28.646323799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03a50617858f%3A0x716da3a872331a01!2sSam%20strength%20fitness%20unisex%20gym!5e0!3m2!1sen!2sin!4v1778502604036!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- map end -->
+
+<!-- contact form start -->
+<div class="contact_form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="about_inner_page_con title_box">
+          <h2 class="title"><span>Contact Form </span>Fill the below form</h2>
+          <p>Our team will get back to you within 24 hours. For urgent inquiries, call us directly.</p>
+        </div>
+      </div>
+    </div>
+    
+    <form method="POST" id="contactForm">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6">
+          <input name="name" class="contact_form_detail" required type="text" placeholder="Your Name" minlength="3">
+        </div>
+        <div class="col-md-6">
+          <input 
+            name="phone"
+            class="contact_form_detail"
+            required
+            type="tel"
+            placeholder="Phone No."
+            maxlength="10"
+            pattern="[6-9]{1}[0-9]{9}"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)"
+            title="Enter valid 10-digit mobile number">
+        </div>
+        <div class="col-md-12">
+          <textarea name="message" class="contact_form_detail1" required placeholder="Your Message (e.g., membership inquiry, personal training, etc.)"></textarea>
+        </div>
+        <div class="col-md-12">
+          <div class="submit_btn_box">
+            <input name="submit" class="submit_btn hvr-shutter-out-horizontal" type="submit" value="Submit Now">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Success Popup Modal -->
+<div id="successModal" class="success-modal">
+  <div class="success-modal-content">
+    <span class="close-top" onclick="closeModal()">&times;</span>
+    
+    <!-- Animated SVG Checkmark -->
+    <div class="success-icon">
+      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+      </svg>
+    </div>
+    
+    <h3>Thank You!</h3>
+    <p>Your query has been submitted successfully.<br>Our team will get back to you within 24 hours.</p>
+    
+    <button class="modal-close-btn" onclick="closeModal()">Continue</button>
+  </div>
+</div>
+
+<script>
+  // Function to show popup with confetti effect
+  function showSuccessPopup() {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'flex';
+    
+    // Create confetti effect
+    createConfetti();
+    
+    // Close modal when clicking outside
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    };
+    
+    // Auto close after 5 seconds
+    setTimeout(closeModal, 5000);
+  }
+  
+  // Close modal function
+  function closeModal() {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'none';
+    // Clear URL parameters if any
+    if (window.history && typeof window.history.replaceState === 'function') {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }
+  
+  // Confetti effect generator
+  function createConfetti() {
+    const colors = ['#fbbf24', '#22c55e', '#ef4444', '#3b82f6', '#a855f7', '#ec4899'];
+    const modalContent = document.querySelector('.success-modal-content');
+    
+    for (let i = 0; i < 80; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.width = Math.random() * 8 + 4 + 'px';
+      confetti.style.height = confetti.style.width;
+      confetti.style.animationDelay = Math.random() * 0.5 + 's';
+      confetti.style.animationDuration = Math.random() * 1.5 + 1 + 's';
+      modalContent.appendChild(confetti);
+      
+      // Remove confetti after animation
+      setTimeout(() => {
+        if (confetti && confetti.remove) confetti.remove();
+      }, 2500);
+    }
+  }
+  
+  // Check if form was successfully submitted (via Django message)
+  {% if msg %}
+    // Small delay to ensure DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      showSuccessPopup();
+    });
+  {% endif %}
+  
+  // Optional: Prevent double form submission
+  document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    const submitBtn = this.querySelector('input[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.value = 'Submitting...';
+    }
+  });
+</script>
+
+<!-- contact form end -->
 {% endblock %}

@@ -1,27 +1,10 @@
 {% extends "home/index.html" %}
 {% load static %}
 {% block body %}
-    <!-- Page_banner start -->
-    <section class="breadcrumb_sec" style="background-image:url({%static 'home/assets/images/blog-bg.jpg'%});">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title_box_page">
-              <div class="page_banner_img"> <img class="img-responsive wow fadeInLeft animated img_animate"
-                  src="{%static 'home/assets/images/title-bg.png'%}" alt=""> </div>
-              <div class="page_banner_title">
-                <h2 class="wow fadeInUp animated title_animate">Blog Single</h2>
-                <p class="wow fadeInUp animated titlep_animate">BUILDING A COMMUNITY OF ATHLETIC WOMEN</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Page_banner end -->
+  
 
     <!-- /blog start-->
-    <div class="blog_main_sec">
+    <div class="blog_main_sec"style="margin-top:120px">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-8 col-xs-12 blog_left">
@@ -33,266 +16,93 @@
                   <!-- loop starts -->
 
                   <!-- TT-BLOG -->
-                  <div class="image"> <img width="750" height="224" src="{%static 'home/assets/images/blogbg.jpg'%}"
-                      class="img-responsive wp-post-image" alt=""> </div>
+                  <div class="image"> <img width="750" height="224" src="{{data.image.url}}" style="height:auto" loading="lazy"
+                      class="img-responsive wp-post-image" alt="{{item.title}}"> </div>
                   <div class="info">
                     <div class="date-wrapper">
                       <div class="date">
-                        <p class="post-date">06</p>
-                        <p class="post-month">Nov</p>
+                        <p class=""style="font-size:18px" ></p>
                       </div>
                     </div>
                     <div class="title-info">
                       <div class="title">
-                        <h2 class="tittle">Many desktop publishing packages and web page editors</h2>
+                        <h1 class="tittle">{{data.title}}</h1>
                       </div>
+                      
                       <div class="info">
                         <p> <span> <i class="fa fa-user"></i> By: <a href="#" title="Visit templatation’s website"
-                              rel="author external">templatation</a> </span> <span> <i class="fa fa-comments"></i><a
-                              href="#">Comments 0</a> </span> </p>
+                              rel="author external">Admin</a> </span> <span> <i class="fa fa-clock-o" aria-hidden="true"></i><a
+                              href="#">{{data.date}}</a> </span> </p>
                       </div>
+                    
                     </div>
                   </div>
                   <!-- Post content -->
                   <div class="main-content-box">
-                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those
-                      who do not know how to pursue pleasure rationally encounter consequences that are extremely
-                      painful.</p>
-                    <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is
-                      pain, but because occasionally circumstances occur in which toil and pain can procure him some
-                      great pleasure.</p>
-                    <blockquote>
-                      <p>Vivamus tristique ligula quis orci malesuada tincidunt. Praesent magna purus, pharetra eu
-                        eleifend non, euismod vitae leo. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                        Quisque sapien enim, feugiat et mi vel, fermentum placerat tortor.</p>
-                    </blockquote>
-                    <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to
-                      obtain some advantage from it?</p>
-                    <h3>Nobis eleifend option conguenes</h3>
-                    <p>But who has any right to find fault with a man who chooses to enjoy a pleasure that has no
-                      annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                      Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
-                      demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
-                      foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in
-                      their duty through weakness of will, which is the same as saying through shrinking from toil and
-                      pain.</p>
+                      {{data.content|safe}}
                   </div>
-                </div>
-
-                <!-- Tags  -->
-                <span class="singletags">Tags: <a href="http://blthemedemos.wpengine.com/fitnesspro/tag/donec/"
-                    rel="tag">donec</a>, <a href="http://blthemedemos.wpengine.com/fitnesspro/tag/pretium/"
-                    rel="tag">pretium</a>, <a href="http://blthemedemos.wpengine.com/fitnesspro/tag/quam/"
-                    rel="tag">quam</a>, <a href="http://blthemedemos.wpengine.com/fitnesspro/tag/ultricies/"
-                    rel="tag">ultricies</a></span>
-                <!-- Post nav -->
-                <div class="clearfix mbottom30"></div>
-                <div class="clearfix"></div>
-
-                <!-- Post sharing meta -->
-
-                <div class="tag-social-box clearfix">
-                  <div class="social-box pull-right">
-                    <ul>
-                      <li> <a href="#!"> <i class="fa fa-facebook"></i> </a> </li>
-                      <li> <a href="#!"> <i class="fa fa-twitter"></i> </a> </li>
-                      <li> <a href="#!"> <i class="fa fa-google-plus"></i> </a> </li>
-                      <li> <a href="#!"> <i class="fa fa-linkedin"></i>
-                        </a> </li>
-                      <li> <a href="#!"> <i class="fa fa-instagram"></i> </a> </li>
-                      <li> <a href="#!"> <i class="fa fa-pinterest"></i> </a> </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Author box -->
-
-                <div class="admin-info-box">
-                  <div class="img-box"> <img alt=""
-                      src="http://1.gravatar.com/avatar/dce646958295aaa431788890e32fbb7f?s=114&amp;d=mm&amp;r=g"
-                      srcset="http://1.gravatar.com/avatar/dce646958295aaa431788890e32fbb7f?s=228&amp;d=mm&amp;r=g 2x"
-                      class="avatar avatar-114 photo" height="114" width="114"> </div>
-                  <div class="text-box">
-                    <h3>templatation</h3>
-                    <p class="text_detail"> People think focus means saying yes to the thing you’ve got to focus on. But
-                      that’s not what it means at all. It means saying no to the hundred other good ideas that there
-                      are. You have to pick carefully.</p>
-                    <p><a class="author-link" href="http://blthemedemos.wpengine.com/fitnesspro/author/dinesh/"
-                        rel="author">View all posts by templatation</a></p>
-                  </div>
-                </div>
-
-                <!-- Comments nav -->
-                <div class="comment-part">
-                  <div class="comments-box">
-                    <h3 class="title"><span>Comments (No Responses )</span></h3>
-
-                    <!-- You can start editing here. -->
-
-                    <div id="comments">
-                      <h5 class="nocomments">No comments yet.</h5>
-                    </div>
-                    <div id="respond" class="comment-respond">
-                      <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow"
-                            id="cancel-comment-reply-link"
-                            href="https://netizensstore.com/fitnesspro/2016/11/06/many-desktop-publishing-packages-and-web-page-editors-2/#respond"
-                            style="display:none;">Click here to cancel reply.</a></small></h3>
-                      <form
-                        action="http://blthemedemos.wpengine.com/fitnesspro/wp-comments-post.php?wpe-comment-post=blthemedemos"
-                        method="post" id="commentform" class="comment-form" novalidate>
-                        <p class="comment-form-comment">
-                          <textarea id="comment" name="comment" aria-required="true" placeholder="Comment"></textarea>
-                        </p>
-                        <p class="comment-form-author">
-                          <input id="author" placeholder="Name*" class="txt" name="author" type="text" value=""
-                            size="30" aria-required="true">
-                        </p>
-                        <p class="comment-form-email">
-                          <input id="email" class="txt" name="email" placeholder="Email*" type="text" value="" size="30"
-                            aria-required="true">
-                        </p>
-                        <p class="comment-form-url">
-                          <input id="url" class="txt" name="url" placeholder="Website" type="text" value="" size="30">
-                        </p>
-                        <p class="form-submit">
-                          <input name="submit" type="submit" id="submit" class="submit" value="Submit Comment">
-                          <input type="hidden" name="comment_post_ID" value="2245" id="comment_post_ID">
-                          <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-                        </p>
-                      </form>
-                    </div>
-                    <!-- #respond -->
-                    <div class="fix"></div>
-                  </div>
-                  <!-- /.comments-box -->
-                  <!-- Yes there is intentional extra div on this page/ see line 24 -->
-                </div>
+                </div>                
               </div>
             </div>
           </div>
           <div class="col-sm-12 col-md-4 col-xs-12 blog_right">
-            <div class="search_blog">
-              <form class="input-group col-md-12 col-sm-12 col-xs-12">
-                <input type="text" class="form-control input-lg" placeholder="Search" />
-                <span class="input-group-btn">
-                  <button class="btn" type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                </span>
-              </form>
-            </div>
-            <article class="Categories_blog">
-              <h3 class="blog_title"> Categories </h3>
-              <ul class="Categories">
-                <li class="cat_list "><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i>Lorem ipsum dolor sit...</span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Tur adipiscing elites... </span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Egestas orci, vitae ulla... </span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Consectetur id onec at...</span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Lum rutrum massa quis...</span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Donec et ultricies ipsum... </span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Aliquam non est a fac... </span></a> </li>
-                <li class="cat_list"><a href="#"> <span class="cat_name"><i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Erisque eu sed lectus...</span></a> </li>
-                <li class="cat_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Ibus nunc quis ex tr...</span></a> </li>
-              </ul>
-            </article>
+            
+            
             <article class="articles_blog">
               <h3 class="blog_title"> Recent Articles </h3>
               <ul>
-                <li class="art_list "><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i>Lorem ipsum dolor sit... </span></a> </li>
-                <li class="art_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Tur adipiscing elites... </span></a> </li>
-                <li class="art_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Egestas orci, vitae ull... </span></a> </li>
-                <li class="art_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Consectetur id onec at... </span></a> </li>
-                <li class="art_list"><a href="#"><span class="cat_name"> <i class="fa fa-angle-right"
-                        aria-hidden="true"></i> Lum rutrum massa quis p...</span></a> </li>
+                {%for item in similar_blog%}
+                <li class="art_list "><a href="/blog-details/{{item.slug}}"><span class="cat_name"> <i class="fa fa-angle-right"
+                        aria-hidden="true"></i>{{item.title|slice:"40"}}... </span></a> </li>
+                {%endfor%}
               </ul>
             </article>
-            <article class="Schedule_blog col-sm-12 col-xs-12 colmd-12">
-              <h3 class="blog_title"> Today’s Schedule </h3>
-              <div class="panel-group" id="accordion">
-                <div class="steps-container">
-                  <input type="radio" name="steps" id="step01" checked />
-                  <label for="step01"><span>21,November,2016</span></label>
-                  <div class="description">
-                    <div class="panel-body">
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt1.png'%}" alt=""> Intermediate - <span
-                          class="orange_text">08:00Am to 09:00Am </span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt2.png'%}" alt=""> TRX - <span
-                          class="orange_text">09:00Am to 10:00Am </span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt3.png'%}" alt=""> Begginer - <span
-                          class="orange_text">10:00Am to 11:00Am</span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt4.png'%}" alt=""> Boot Camp - <span
-                          class="orange_text">11:00Am to 12:00Am</span> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="steps-container">
-                  <input type="radio" name="steps" id="step02" checked />
-                  <label for="step02"><span>25,Dec,2017</span></label>
-                  <div class="description">
-                    <div class="panel-body">
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt1.png'%}" alt=""> Intermediate - <span
-                          class="orange_text">08:00Am to 09:00Am </span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt2.png'%}" alt=""> TRX - <span
-                          class="orange_text">09:00Am to 10:00Am </span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt3.png'%}" alt=""> Begginer - <span
-                          class="orange_text">10:00Am to 11:00Am</span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt4.png'%}" alt=""> Boot Camp - <span
-                          class="orange_text">11:00Am to 12:00Am</span> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="steps-container ">
-                  <input type="radio" name="steps" id="step03" checked />
-                  <label for="step03"><span>05,Jun,2018</span></label>
-                  <div class="description">
-                    <div class="panel-body">
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt1.png'%}" alt=""> Intermediate - <span
-                          class="orange_text">08:00Am to 09:00Am </span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt2.png'%}" alt=""> TRX - <span
-                          class="orange_text">09:00Am to 10:00Am </span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt3.png'%}" alt=""> Begginer - <span
-                          class="orange_text">10:00Am to 11:00Am</span> </div>
-                      <div class="timedetail"> <img src="{%static 'home/assets/images/tt4.png'%}" alt=""> Boot Camp - <span
-                          class="orange_text">11:00Am to 12:00Am</span> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="tags_blog col-sm-12 col-xs-12 colmd-12">
-              <h3 class="blog_title"> Popular tags </h3>
-              <ul class="tag_list">
-                <li class="tags"> <a href="#">Yoga Center </a></li>
-                <li class="tags"> <a href="#">Tranning </a></li>
-                <li class="tags"> <a href="#">Fat Loss </a></li>
-                <li class="tags"> <a href="#">Weight Gain </a> </li>
-                <li class="tags "> <a href="#">Fitness </a></li>
-                <li class="tags"> <a href="#">Running </a></li>
-                <li class="tags"> <a href="#">Gym </a></li>
-                <li class="tags"> <a href="#">Cardio </a> </li>
-                <li class="tags"> <a href="#">stretching </a> </li>
-                <li class="tags"> <a href="#">Workout </a> </li>
-                <li class="tags"> <a href="#">Bodybulding </a> </li>
-                <li class="tags"> <a href="#">Bicep </a> </li>
-              </ul>
-            </article>
+            
           </div>
         </div>
       </div>
     </div>
+<style>
+/* Reset homepage table styles inside blog content */
+.main-content-box table,
+.main-content-box table * {
+    all: revert;
+}
 
+/* Custom blog table style */
+.main-content-box table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 20px 0 !important;
+    display: table !important;
+    overflow-x: auto;
+}
+
+.main-content-box th,
+.main-content-box td {
+    border: 1px solid #ddd !important;
+    padding: 12px !important;
+    text-align: left !important;
+}
+
+.main-content-box th {
+    background: #f5f5f5 !important;
+    font-weight: 600 !important;
+}
+
+.main-content-box tr:nth-child(even) {
+    background: #fafafa !important;
+}
+
+.main-content-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile scroll for table */
+.main-content-box {
+    overflow-x: auto;
+}
+</style>
     <!-- /blog end-->
 {%endblock%}
