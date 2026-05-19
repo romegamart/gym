@@ -72,6 +72,11 @@ def blog_details_page(request,slug):
 def schedule(request):
     return render(request,'home/shedule.html')
 
+
+@ratelimit(key='ip', rate='10/m', method='GET', block=True)
+def pricing_page(request):
+    return render(request,'home/pricing.html')
+
 #AJAX
 
 from django.http import JsonResponse

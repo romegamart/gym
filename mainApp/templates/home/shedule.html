@@ -20,19 +20,20 @@
     </section>
     <!-- Page_banner end -->
 
-    <!-- schedule start-->
-    <div class="timetable_sec inner_timetable">
+  
+    <!--Timetable start - updated trainer names to Sameer & team-->
+    <section class="timetable_sec" id="timetable">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-xs-12 col-md-12 timetable_sec1">
-            <div class="row">
-              <div class="col-lg-12 col-md-12">
-                <ul class="tabs ampmtime nav nav-tabs justify-content-end">
-                  <li class="active" rel="tab1">AM</li>
-                  <li rel="tab2">PM</li>
-                </ul>
-              </div>
-            </div>
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <h2 class="title"><span>Timetable</span> Weekly Class Schedule</h2>
+            <p class="aftertitle">Join sessions led by Sameer Kumar and expert coaches. Customizable timings also available for personal training.</p>
+          </div>
+          <div class="col-lg-2">
+            <ul class="tabs ampmtime nav nav-tabs">
+              <li class="active" rel="tab1">AM</li>
+              <li rel="tab2">PM</li>
+            </ul>
           </div>
           <div class="contnet-table">
             <div id="tab1" class="tab_content">
@@ -42,7 +43,7 @@
                     <div class="td-date-time"> <span class="td-empty"></span> </div>
                   </td>
                   <td>
-                    <div class="td-date-time"> <span class="td-time">8:00</span> <span class="td-duration">am</span>
+                    <div class="td-date-time"> <span class="td-time">6:00</span> <span class="td-duration">am</span>
                     </div>
                   </td>
                   <td>
@@ -58,7 +59,7 @@
                     </div>
                   </td>
                   <td>
-                    <div class="td-date-time"> <span class="td-time">11:30</span> <span class="td-duration">am</span>
+                    <div class="td-date-time"> <span class="td-time">11:00</span> <span class="td-duration">am</span>
                     </div>
                   </td>
                 </tr>
@@ -66,108 +67,92 @@
                   <td><span class="day">sunday</span></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="intermediate" width="58" height="60" /></div>
+                        <span class="td-title">Weight Training</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" alt="beginners" width="54" height="53" /></div>
+                        <span class="td-title">Core & Conditioning</span> <span class="td-desc">(Ritika)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="strength" width="58" height="60" /></div>
+                        <span class="td-title">Muscle Building</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt5.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt5.png' %}" alt="bootcamp" width="41" height="55" /></div>
+                        <span class="td-title">HIIT</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" alt="trx" width="46" height="54" /></div>
+                        <span class="td-title">Nutrition Workshop</span> <span class="td-desc">(Sameer)</span>
                       </div>
-                    </a>
-                  </td>
+                    </a></td>
                 </tr>
                 <tr>
                   <td><span class="day">monday</span></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" alt="trx" width="46" height="54" /></div>
+                        <span class="td-title">TRX / Functional</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" alt="beginners" width="54" height="53" /></div>
+                        <span class="td-title">Weight Loss</span> <span class="td-desc">(Ritika)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="immediate" width="58" height="60" /></div>
+                        <span class="td-title">Competitive Prep</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td class="slide-bottom two"><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="intermediate" width="58" height="60" /></div>
+                        <span class="td-title">Strength & Power</span> <span class="td-desc">(Sameer)</span>
                       </div>
-                    </a>
-                  </td>
+                    </a></td>
                 </tr>
                 <tr>
                   <td><span class="day">tuesday</span></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" alt="spinning" width="59" height="56" /></div>
+                        <span class="td-title">Spinning</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" alt="beginners" width="54" height="53" /></div>
+                        <span class="td-title">Weight Training</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="immediate" width="58" height="60" /></div>
+                        <span class="td-title">Men's Physique</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt5.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt5.png' %}" alt="boot-camp" width="41" height="55" /></div>
+                        <span class="td-title">Boot Camp</span> <span class="td-desc">(Ritika)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" alt="spinning" width="59" height="56" /></div>
+                        <span class="td-title">Stretch & Mobility</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a></td>
                 </tr>
@@ -175,43 +160,37 @@
                   <td><span class="day">WEDNESDAY</span></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" alt="spinning" width="59" height="56" /></div>
+                        <span class="td-title">Spinning</span> <span class="td-desc">(Team)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" alt="beginners" width="54" height="53" /></div>
+                        <span class="td-title">Women's Fitness</span> <span class="td-desc">(Ritika)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="immediate" width="58" height="60" /></div>
+                        <span class="td-title">Bodybuilding</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td class="slide-bottom one"><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt5.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt5.png' %}" alt="boot-camp" width="41" height="55" /></div>
+                        <span class="td-title">Boot Camp</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a> <a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt6.png'%}" alt="boxing" width="52" height="18" />
-                        </div>
-                        <span class="td-title">BOXING</span> <span class="td-desc">(MANAL)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt6.png' %}" alt="boxing" width="52" height="18" /></div>
+                        <span class="td-title">Boxing</span> <span class="td-desc">(Coach)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" alt="trx" width="46" height="54" /></div>
+                        <span class="td-title">TRX</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a></td>
                 </tr>
@@ -219,37 +198,32 @@
                   <td><span class="day">thursday</span></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" alt="spinning" width="59" height="56" /></div>
+                        <span class="td-title">Spinning</span> <span class="td-desc">(Team)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" alt="beginners" width="54" height="53" /></div>
+                        <span class="td-title">Weight Loss</span> <span class="td-desc">(Ritika)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="immediate" width="58" height="60" /></div>
+                        <span class="td-title">Muscle Gain</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="boot-camp" width="41" height="55" /></div>
+                        <span class="td-title">Boot Camp</span> <span class="td-desc">(Vikram)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" alt="trx" width="46" height="54" /></div>
+                        <span class="td-title">TRX/Core</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                 </tr>
@@ -257,37 +231,32 @@
                   <td><span class="day">friday</span></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="immediate" width="58" height="60" /></div>
+                        <span class="td-title">Strength</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="intermediate" width="58" height="60" /></div>
+                        <span class="td-title">Men's Physique</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" alt="strength" width="58" height="60" /></div>
+                        <span class="td-title">Competitive Prep</span> <span class="td-desc">(Sameer)</span>
                       </div>
                     </a></td>
                   <td><a href="javascript:void(0);">
                       <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
+                        <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" alt="beginners" width="54" height="53" /></div>
+                        <span class="td-title">Weight Loss</span> <span class="td-desc">(Ritika)</span>
                       </div>
                     </a></td>
                   <td>
                     <div class="td-services">
-                      <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt7.png'%}" alt="core" width="52" height="52" />
-                      </div>
-                      <span class="td-title">CORE</span> <span class="td-desc">(ANNA)</span>
+                      <div class="td-img-wrap"><img src="{% static 'home/assets/images/tt7.png' %}" alt="core" width="52" height="52" /></div>
+                      <span class="td-title">Core & Abs</span> <span class="td-desc">(Team)</span>
                     </div>
                   </td>
                 </tr>
@@ -300,261 +269,59 @@
                     <div class="td-date-time"> <span class="td-empty"></span> </div>
                   </td>
                   <td>
+                    <div class="td-date-time"> <span class="td-time">5:00</span> <span class="td-duration">pm</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td-date-time"> <span class="td-time">6:00</span> <span class="td-duration">pm</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="td-date-time"> <span class="td-time">7:00</span> <span class="td-duration">pm</span>
+                    </div>
+                  </td>
+                  <td>
                     <div class="td-date-time"> <span class="td-time">8:00</span> <span class="td-duration">pm</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="td-date-time"> <span class="td-time">9:00</span> <span class="td-duration">pm</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="td-date-time"> <span class="td-time">10:00</span> <span class="td-duration">pm</span>
                     </div>
                   </td>
                   <td>
                     <div class="td-date-time"> <span class="td-time">11:00</span> <span class="td-duration">pm</span>
                     </div>
                   </td>
-                  <td>
-                    <div class="td-date-time"> <span class="td-time">11:30</span> <span class="td-duration">pm</span>
-                    </div>
-                  </td>
                 </tr>
                 <tr>
                   <td><span class="day">sunday</span></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt5.png'%}" alt="boot-cpmp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+          
                 </tr>
                 <tr>
                   <td><span class="day">monday</span></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td class="slide-bottom two"><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" width="46" height="54" /></div><span class="td-title">TRX</span><span class="td-desc">(Vikram)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" width="54" height="53" /></div><span class="td-title">Weight Loss</span><span class="td-desc">(Ritika)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Muscle Building</span><span class="td-desc">(Sameer)</span></div></a></td>
+                  <td class="slide-bottom two"><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Strength</span><span class="td-desc">(Sameer)</span></div></a></td>
                 </tr>
                 <tr>
                   <td><span class="day">tuesday</span></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt5.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" width="59" height="56" /></div><span class="td-title">Spinning</span><span class="td-desc">(Vikram)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" width="54" height="53" /></div><span class="td-title">Beginner</span><span class="td-desc">(Ritika)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Men's Physique</span><span class="td-desc">(Sameer)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt5.png' %}" width="41" height="55" /></div><span class="td-title">Boot Camp</span><span class="td-desc">(Ritika)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" width="59" height="56" /></div><span class="td-title">Mobility</span><span class="td-desc">(Vikram)</span></div></a></td>
                 </tr>
-                <tr>
-                  <td><span class="day">WEDNESDAY</span></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td class="slide-bottom one"><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt5.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a> <a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt6.png'%}" alt="boxing" width="52" height="18" />
-                        </div>
-                        <span class="td-title">BOXING</span> <span class="td-desc">(MANAL)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                </tr>
-                <tr>
-                  <td><span class="day">thursday</span></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt3.png'%}" alt="spinning" width="59"
-                            height="56" /></div>
-                        <span class="td-title">Spinning</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="boot-camp" width="41"
-                            height="55" /></div>
-                        <span class="td-title">BOOT CAMP</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt2.png'%}" alt="trx" width="46" height="54" />
-                        </div>
-                        <span class="td-title">TRX</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                </tr>
-                <tr>
-                  <td><span class="day">friday</span></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt1.png'%}" alt="immediate" width="58"
-                            height="60" /></div>
-                        <span class="td-title">INTERMIDIATE</span> <span class="td-desc">(ANNA)</span>
-                      </div>
-                    </a></td>
-                  <td><a href="javascript:void(0);">
-                      <div class="td-services">
-                        <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt4.png'%}" alt="beginners" width="54"
-                            height="53" /></div>
-                        <span class="td-title">BEGGINERS</span> <span class="td-desc">(SHEREEN)</span>
-                      </div>
-                    </a></td>
-                  <td>
-                    <div class="td-services">
-                      <div class="td-img-wrap"><img src="{%static 'home/assets/images/tt7.png'%}" alt="core" width="52" height="52" />
-                      </div>
-                      <span class="td-title">CORE</span> <span class="td-desc">(ANNA)</span>
-                    </div>
-                  </td>
-                </tr>
+                <tr><td><span class="day">WEDNESDAY</span></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" width="59" height="56" /></div><span class="td-title">Spinning</span><span class="td-desc">(Team)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" width="54" height="53" /></div><span class="td-title">Women's Fit</span><span class="td-desc">(Ritika)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Bodybuilding</span><span class="td-desc">(Sameer)</span></div></a></td><td class="slide-bottom one"><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt5.png' %}" width="41" height="55" /></div><span class="td-title">Boot Camp</span><span class="td-desc">(Vikram)</span></div></a> <a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt6.png' %}" width="52" height="18" /></div><span class="td-title">Boxing</span><span class="td-desc">(Coach)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" width="46" height="54" /></div><span class="td-title">TRX</span><span class="td-desc">(Vikram)</span></div></a></td></tr>
+                <tr><td><span class="day">thursday</span></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt3.png' %}" width="59" height="56" /></div><span class="td-title">Spinning</span><span class="td-desc">(Team)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" width="54" height="53" /></div><span class="td-title">Weight Loss</span><span class="td-desc">(Ritika)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Muscle Gain</span><span class="td-desc">(Sameer)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="41" height="55" /></div><span class="td-title">Boot Camp</span><span class="td-desc">(Vikram)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" width="46" height="54" /></div><span class="td-title">TRX</span><span class="td-desc">(Sameer)</span></div></a></td></tr>
+                <tr><td><span class="day">friday</span></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Strength</span><span class="td-desc">(Sameer)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Men's Physique</span><span class="td-desc">(Sameer)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Competitive</span><span class="td-desc">(Sameer)</span></div></a></td><td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" width="54" height="53" /></div><span class="td-title">Weight Loss</span><span class="td-desc">(Ritika)</span></div></a></td><td><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt7.png' %}" width="52" height="52" /></div><span class="td-title">Core</span><span class="td-desc">(Team)</span></div></td></tr>
               </table>
             </div>
-
           </div>
         </div>
       </div>
-    </div>
-    <!-- /shedule end-->
+    </section>
 
     <!-- /discount start-->
     <section class="discount_con">

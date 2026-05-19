@@ -66,18 +66,49 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav navbar-right ms-auto" id="onenav">
-                  <li class="nav-link current"><a href="/" class="js-scroll-trigger">HOME</a> </li>
-                  <li class="nav-link"><a href="/about-us" class="js-scroll-trigger">ABOUT US</a> </li>
-                  <li class="nav-link"><a href="/courses" class="js-scroll-trigger">COURSES</a></li>
-                  <li class="nav-link"><a href="/schedule" class="js-scroll-trigger">SCHEDULE</a></li>
-                  <li class="nav-link"><a href="/blog" class="js-scroll-trigger">BLOG</a></li>
-                  <li class="nav-link"><a href="/contact-us" class="js-scroll-trigger">CONTACT US</a></li>
-                  <li class="social_nav">
-                    <div class="social"><span class="txt"> Follow on </span><a class="circlef" href="#"><i
-                          class="fa fa-facebook-f"></i></a><a class="circlei" href="#"><i
-                          class="fa fa-instagram"></i></a> </div>
-                  </li>
-                </ul>
+
+    <li class="nav-link {% if request.path == '/' %}current{% endif %}">
+        <a href="/" class="js-scroll-trigger">HOME</a>
+    </li>
+
+    <li class="nav-link {% if request.path == '/about-us/' %}current{% endif %}">
+        <a href="/about-us/" class="js-scroll-trigger">ABOUT US</a>
+    </li>
+
+    <li class="nav-link {% if request.path == '/courses/' %}current{% endif %}">
+        <a href="/courses/" class="js-scroll-trigger">COURSES</a>
+    </li>
+
+    <li class="nav-link {% if request.path == '/schedule/' %}current{% endif %}">
+        <a href="/schedule/" class="js-scroll-trigger">SCHEDULE</a>
+    </li>
+
+    <li class="nav-link {% if request.path == '/blog/' %}current{% endif %}">
+        <a href="/blog/" class="js-scroll-trigger">BLOG</a>
+    </li>
+
+    <li class="nav-link {% if request.path == '/contact-us/' %}current{% endif %}">
+        <a href="/contact-us/" class="js-scroll-trigger">CONTACT US</a>
+    </li>
+
+    <li class="nav-link {% if request.path == '/pricing/' %}current{% endif %}">
+        <a href="/pricing/" class="js-scroll-trigger">PRICING</a>
+    </li>
+
+    <li class="social_nav">
+        <div class="social">
+            <span class="txt">Follow on</span>
+            <a class="circlef" href="https://www.facebook.com/p/Sam-strength-unisex-gym-100064727360386/">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+            <a class="circlei" href="https://www.instagram.com/sam_strength_gym/">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+    </li>
+
+</ul>
+                
                 <div class="clearfix"></div>
               </div>
             </div>
@@ -291,7 +322,7 @@
                     <div class="td-date-time"> <span class="td-empty"></span> </div>
                   </td>
                   <td>
-                    <div class="td-date-time"> <span class="td-time">8:00</span> <span class="td-duration">am</span>
+                    <div class="td-date-time"> <span class="td-time">6:00</span> <span class="td-duration">am</span>
                     </div>
                   </td>
                   <td>
@@ -307,7 +338,7 @@
                     </div>
                   </td>
                   <td>
-                    <div class="td-date-time"> <span class="td-time">11:30</span> <span class="td-duration">am</span>
+                    <div class="td-date-time"> <span class="td-time">11:00</span> <span class="td-duration">am</span>
                     </div>
                   </td>
                 </tr>
@@ -539,11 +570,12 @@
                 </tr>
                 <tr>
                   <td><span class="day">sunday</span></td>
-                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Strength</span><span class="td-desc">(Sameer)</span></div></a></td>
-                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt4.png' %}" width="54" height="53" /></div><span class="td-title">Weight Loss</span><span class="td-desc">(Ritika)</span></div></a></td>
-                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt1.png' %}" width="58" height="60" /></div><span class="td-title">Bodybuilding</span><span class="td-desc">(Sameer)</span></div></a></td>
-                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt5.png' %}" width="41" height="55" /></div><span class="td-title">HIIT</span><span class="td-desc">(Vikram)</span></div></a></td>
-                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap"><img src="{% static 'home/assets/images/tt2.png' %}" width="46" height="54" /></div><span class="td-title">Nutrition</span><span class="td-desc">(Sameer)</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+                  <td><a href="javascript:void(0);"><div class="td-services"><div class="td-img-wrap" style="color:red"><span class="td-desc">Closed</span></div></a></td>
+          
                 </tr>
                 <tr>
                   <td><span class="day">monday</span></td>
@@ -778,7 +810,7 @@ document.addEventListener('DOMContentLoaded', function () {
             maxlength="10"
             pattern="[6-9]{1}[0-9]{9}"
             oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)"
-            title="Enter valid 10-digit mobile number" />
+            title="Enter valid 10-digit mobile number"/>
           </p>
           <p>
             <textarea name="message" placeholder="Message (Inquiry about membership / training)"></textarea>

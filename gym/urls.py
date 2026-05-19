@@ -13,6 +13,7 @@ urlpatterns = [
     path('blog/', views.blog_page),
     path('blog-details/<str:slug>/', views.blog_details_page),
     path('schedule/', views.schedule),
+    path('pricing/', views.pricing_page),
     #AJAX
     path('ajax/courses/',views.ajax_courses,name="ajax_courses"),
     path('ajax/gallery/',views.ajax_gallery,name="ajax_gallery"),
